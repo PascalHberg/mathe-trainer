@@ -1,0 +1,28 @@
+name: Mathe Trainer CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+
+      - name: Python Setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencies installieren
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Syntax Check
+        run: python -m py_compile main.py
