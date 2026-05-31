@@ -1,0 +1,11 @@
+{
+  "buildCommand": "mvn clean package -DskipTests",
+  "outputDirectory": "target",
+  "framework": "other",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
+}
