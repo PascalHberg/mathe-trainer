@@ -1,11 +1,3 @@
 {
-  "buildCommand": "apt-get update && apt-get install -y maven default-jdk && mvn clean package -DskipTests",
-  "outputDirectory": "target",
-  "framework": "other",
-  "functions": {
-    "target/**": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  }
+  "version": 2
 }
