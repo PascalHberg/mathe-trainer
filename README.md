@@ -35,6 +35,17 @@ Oder direkt mit Maven:
 mvn exec:java -Dexec.mainClass="com.mathetrainer.Main"
 ```
 
+## 🚀 Deployment auf Vercel
+
+Diese Anwendung kann einfach auf Vercel bereitgestellt werden. Siehe [DEPLOYMENT.md](./DEPLOYMENT.md) für detaillierte Anweisungen.
+
+### Schnellstart Vercel Deployment:
+1. Gehe zu https://vercel.com/new
+2. Importiere `PascalHberg/mathe-trainer`
+3. Vercel nutzt die `vercel.json` Konfiguration automatisch
+4. Deploy wird automatisch gestartet
+5. Deine App ist live verfügbar!
+
 ## Performance-Verbesserungen gegenüber Python
 
 1. **Schnellerer Start** - Compiled bytecode statt Interpretation
@@ -56,8 +67,17 @@ mvn exec:java -Dexec.mainClass="com.mathetrainer.Main"
 │   │   └── ui/MatheTrainerGUI.java    # GUI implementation
 │   └── test/...
 ├── pom.xml                           # Maven configuration
+├── vercel.json                       # Vercel deployment config
+├── package.json                      # Node.js package info
 └── data/                             # Highscore storage
 ```
+
+## Deployment Dateien
+
+- **vercel.json** - Vercel Konfiguration für Build und Deployment
+- **DEPLOYMENT.md** - Ausführliche Deployment-Anleitung
+- **.vercelignore** - Dateien die Vercel ignoriert
+- **package.json** - Node.js/Vercel Metadaten
 
 ## Lizenz
 
