@@ -1,11 +1,11 @@
 {
-  "buildCommand": "mvn clean package -DskipTests",
+  "buildCommand": "apt-get update && apt-get install -y maven default-jdk && mvn clean package -DskipTests",
   "outputDirectory": "target",
   "framework": "other",
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
+  "functions": {
+    "target/**": {
+      "memory": 1024,
+      "maxDuration": 60
     }
-  ]
+  }
 }
