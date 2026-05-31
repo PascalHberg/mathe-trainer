@@ -1,13 +1,13 @@
 {
   "name": "mathe-trainer",
   "version": "1.0.0",
-  "description": "Python-basierte Lern-App zur Übung von Addition, Subtraktion und Multiplikation",
+  "description": "Java-basierte Lern-App zur Übung von Addition, Subtraktion und Multiplikation",
   "scripts": {
-    "build": "mvn clean package -DskipTests",
+    "build": "apt-get update && apt-get install -y maven default-jdk && mvn clean package -DskipTests",
     "start": "java -jar target/mathe-trainer-1.0.0.jar",
     "dev": "mvn exec:java -Dexec.mainClass=\"com.mathetrainer.Main\""
   },
-  "keywords": ["mathe", "learning", "math"],
+  "keywords": ["mathe", "learning", "math", "java"],
   "author": "PascalHberg",
   "license": "MIT",
   "engines": {
